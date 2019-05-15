@@ -57,7 +57,7 @@ public class Tienda extends javax.swing.JFrame {
                 jButtonComprarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 250, 90));
+        getContentPane().add(jButtonComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 250, 90));
 
         jButtonIR2.setBackground(new java.awt.Color(0, 0, 0));
         jButtonIR2.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N

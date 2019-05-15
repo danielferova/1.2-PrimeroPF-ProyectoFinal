@@ -67,7 +67,7 @@ public class OpcionesJuego extends javax.swing.JFrame {
                 jButtonJJActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonJJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 350, 120));
+        getContentPane().add(jButtonJJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 350, 120));
 
         jButtonRTienda.setBackground(new java.awt.Color(0, 0, 0));
         jButtonRTienda.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N

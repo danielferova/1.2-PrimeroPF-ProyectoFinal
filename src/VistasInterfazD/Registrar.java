@@ -18,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static proyectofinaldaniel.ProyectoFinalDaniel.pathPersona;
 import ClasesdelProyecto.html;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,6 +26,7 @@ import ClasesdelProyecto.html;
  */
 public class Registrar extends javax.swing.JFrame {
   //  ArrayList<Persona> lista = new ArrayList<Persona>();
+   
     public static LinkedList contenedor = new LinkedList();
     public int buscar;
     File lista = new File("reporte.html");
@@ -72,18 +74,17 @@ public class Registrar extends javax.swing.JFrame {
               BufferedWriter bw = new BufferedWriter(jj);
              
              kk.generarEncabezado("Vehiculos");
-             kk.ventana("Nombre", "Vehiculo 1", "Vehiculo 2", "Vehiculo 3");
+             kk.ventana("Nombre", "Vehiculo 1", "TipoV1", "Vehiculo 2", "TipoV2", "Vehiculo 3", "TipoV3" );
              bw.write(kk.salida);
              bw.newLine();
              for(int i =0; i<ls.size();i++){
-                  kk.generarFilaHTML(ls.get(i).nombre, ls.get(i).v1, ls.get(i).v2, ls.get(i).v3);
+                  kk.generarFilaHTML(ls.get(i).nombre, ls.get(i).v1, ls.get(i).tipo1, ls.get(i).v2, ls.get(i).tipo2, ls.get(i).v3, ls.get(i).tipo3);
                   bw.write(kk.filatxt);
                   bw.newLine();  
               }
              kk.generarCola();
              bw.write(kk.cola);
              bw.newLine();
-             
              bw.close();
              jj.close();
           } catch (Exception e) {
@@ -189,7 +190,7 @@ public class Registrar extends javax.swing.JFrame {
         Jmostrar1.setBackground(new java.awt.Color(255, 255, 255));
         Jmostrar1.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         Jmostrar1.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(Jmostrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 270, 230, -1));
+        getContentPane().add(Jmostrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 270, 230, -1));
 
         jComboBoxV2.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jComboBoxV2.setForeground(new java.awt.Color(255, 0, 51));
@@ -266,30 +267,12 @@ public class Registrar extends javax.swing.JFrame {
  * @param evt 
  */
     private void jButtonRegresarTiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarTiposActionPerformed
-        // TODO add your handling code here:
-        //Persona persona = new Persona(jTextFieldNombre.getText());
-        //lista.add(persona);
-         this.setVisible(false);
 
+        this.setVisible(false);
         new OpcionesJuego().setVisible(true);
-        
-       setSize(825, 866);
-       dispose();
-      /*  String nombre = jTextFieldNombre.getText();
-        String v1 = jTextFieldV1.getText();
-        String v2 = jTextFieldV2.getText();
-        String v3 = jTextFieldV3.getText();
-        String tipo1 = Jmostrar1.getText();
-        String tipo2 = Jmostrar2.getText();
-        String tipo3 = Jmostrar3.getText();
-        //NOMBRE DE LA PERSONA ATRUBUTOS
-        Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
-        contenedor.add(person);
-        //Limpia
-        jTextFieldNombre.setText("");
-        jTextFieldV1.setText("");
-        jTextFieldV2.setText("");
-        jTextFieldV3.setText("");*/      
+        setSize(825, 866);
+        dispose();
+       
     }//GEN-LAST:event_jButtonRegresarTiposActionPerformed
 /**
  * Método para ir mi JFRAME JuegoTableros donde esta mis 3 tipos de tableros
@@ -297,6 +280,8 @@ public class Registrar extends javax.swing.JFrame {
  */
     private void jButtonIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIRActionPerformed
         // TODO add your handling code here:
+       
+                
         JuegoTableros entrada2 = new JuegoTableros();
         entrada2.show();
         entrada2.setSize(1290, 1000);

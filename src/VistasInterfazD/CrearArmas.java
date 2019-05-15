@@ -259,14 +259,26 @@ public class CrearArmas extends javax.swing.JFrame {
  * @param evt 
  */
     private void jButtonArmas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArmas1ActionPerformed
-
+        /*this.setVisible(false);
+        CrearArmas r = new CrearArmas();
+        int fila = jTableEstadisticasA.getSelectedRow();
+        CrearArmas.jTextFieldNombre.setText(jTableEstadisticas1.getValueAt(fila,0).toString());
+        CrearArmas.Jmostrar1.setText(jTableEstadisticas1.getValueAt(fila,2).toString());
+        CrearArmas.jTextFieldV1.setText(jTableEstadisticas1.getValueAt(fila,1).toString());
+        CrearArmas.Jmostrar2.setText(jTableEstadisticas1.getValueAt(fila,4).toString());
+        CrearArmas.jTextFieldV2.setText(jTableEstadisticas1.getValueAt(fila,3).toString());
+        CrearArmas.Jmostrar3.setText(jTableEstadisticas1.getValueAt(fila,6).toString());
+        CrearArmas.jTextFieldV3.setText(jTableEstadisticas1.getValueAt(fila,5).toString());
+        
+        r.show();*/      
         CrearArmas d = new CrearArmas();
         d.show();
         d.setVisible(false);
 
+        
+        
         this.setVisible(false);
-        new AEstadisticas().setVisible(true);// TODO add your handling code here:
-
+        new AEstadisticas().setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonArmas1ActionPerformed
 

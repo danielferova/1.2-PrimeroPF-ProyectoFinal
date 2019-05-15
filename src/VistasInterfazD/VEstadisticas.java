@@ -109,7 +109,7 @@ private DefaultTableModel modelo;
  */
     public void CargarRegistrarV(){
     String datos [][]= {};
-    String columna[]= {"Nombre", "Nombre Vehículo1", "Tipo", "Nombre Vehículo2","Tipo","Nombre Vehículo3", "Tipo"};
+    String columna[]= {"Tipo", "Nombre", "Puntería", "Ataque","Defensa","Velocidad", "Costo"};
     String columna1[] = { "V1" };
     
     modelo= new DefaultTableModel(datos, columna);
@@ -137,7 +137,7 @@ private DefaultTableModel modelo;
             }
         } catch (Exception e) {
             e.printStackTrace();
-           // Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+          //  Logger.getLogger(Registrar.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             try {
                 binario.close();

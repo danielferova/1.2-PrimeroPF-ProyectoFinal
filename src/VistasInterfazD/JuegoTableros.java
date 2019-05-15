@@ -17,6 +17,7 @@ import java.util.Random;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,7 +26,10 @@ import javax.swing.JButton;
 public class JuegoTableros extends javax.swing.JFrame {
     int turno, contp, contmp;
     boolean gano= false;
-    
+    //String [] botones = { " 4*4", " 4*6", "8*9" };
+ 
+
+
   Casilla[][] tablero;
     /**
      * constructor
@@ -34,7 +38,12 @@ public class JuegoTableros extends javax.swing.JFrame {
     public JuegoTableros() {
         initComponents();
           this.setLocationRelativeTo(null);
+            setSize(1290, 1000);
+        
           turno = contp = contmp = 1;
+        //  Object [] botones = {"4x4", " 4*6", "8*9" };
+         // int variable = JOptionPane.showOptionDialog (null, " Qué tablero desea?", "Elija uno", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null/*icono*/, botones, botones[0]);
+
         setTitle("FEROVA GAME");
         //tablero = new Casilla[8][8];
            
@@ -50,6 +59,9 @@ public class JuegoTableros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButtonDado3 = new javax.swing.JButton();
+        jButtonDado101 = new javax.swing.JButton();
+        jButtonDado7 = new javax.swing.JButton();
         jButtonHaciaE = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jButton8x9 = new javax.swing.JButton();
@@ -61,6 +73,39 @@ public class JuegoTableros extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButtonDado3.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonDado3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jButtonDado3.setForeground(new java.awt.Color(51, 255, 0));
+        jButtonDado3.setText("DADO 3");
+        jButtonDado3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDado3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 640, 160, 80));
+
+        jButtonDado101.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonDado101.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jButtonDado101.setForeground(new java.awt.Color(51, 255, 0));
+        jButtonDado101.setText("DADO 100");
+        jButtonDado101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDado101ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDado101, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 640, 160, 80));
+
+        jButtonDado7.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonDado7.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jButtonDado7.setForeground(new java.awt.Color(51, 255, 0));
+        jButtonDado7.setText("DADO 6");
+        jButtonDado7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDado7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDado7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, 160, 80));
+
         jButtonHaciaE.setBackground(new java.awt.Color(255, 255, 255));
         jButtonHaciaE.setFont(new java.awt.Font("Dubai", 3, 24)); // NOI18N
         jButtonHaciaE.setForeground(new java.awt.Color(0, 255, 0));
@@ -70,12 +115,12 @@ public class JuegoTableros extends javax.swing.JFrame {
                 jButtonHaciaEActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonHaciaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 770, 200, 80));
+        getContentPane().add(jButtonHaciaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 800, 200, 80));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Generar Tablero");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 340, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 340, 40));
 
         jButton8x9.setBackground(new java.awt.Color(255, 255, 255));
         jButton8x9.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
@@ -87,7 +132,7 @@ public class JuegoTableros extends javax.swing.JFrame {
                 jButton8x9ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8x9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 420, 360, 170));
+        getContentPane().add(jButton8x9, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 380, 340, 150));
 
         jButton4x4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4x4.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
@@ -99,7 +144,7 @@ public class JuegoTableros extends javax.swing.JFrame {
                 jButton4x4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 340, 160));
+        getContentPane().add(jButton4x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 340, 160));
 
         jButton6x4.setBackground(new java.awt.Color(255, 255, 255));
         jButton6x4.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
@@ -111,7 +156,7 @@ public class JuegoTableros extends javax.swing.JFrame {
                 jButton6x4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, 350, 140));
+        getContentPane().add(jButton6x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 230, 270, 140));
 
         panelTablero.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -155,10 +200,9 @@ public class JuegoTableros extends javax.swing.JFrame {
      * @param columnas 
      */
     public void gTablero(int filas, int columnas){
-    BorderLayout b = new BorderLayout();
-   
- 
-        tablero =  new Casilla[filas][columnas];
+    BorderLayout b = new BorderLayout(); 
+    
+       tablero =  new Casilla[filas][columnas];
         int[][] juego = new int[filas][columnas];
         Random n = new Random();
          boolean blanco = true;
@@ -229,13 +273,14 @@ public class JuegoTableros extends javax.swing.JFrame {
          //   tablero[i][j].removeAll();
            //tablero[i][j].repaint();
             
-           
+         
      
            
             }
            
             blanco = !blanco;
         }
+          
         
         int d = (int) (Math.random()*4);
         int d2 = (int) (Math.random()*4);
@@ -277,23 +322,7 @@ public class JuegoTableros extends javax.swing.JFrame {
     }*/
 }
     
-     /*public void hola( Casilla tablero){
-            
-         if(!gano){
-             if(tablero.equals(""))
-             {
-              if(turno*2 == 1)   {
-                  tablero.getIcon("X");
-                  
-                  
-              }
-             }
-         }
-             
-         
-         
-         
-        }*/
+   
     /*public int lanzardado(){
         int numero = 0;
         do{
@@ -343,6 +372,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         
         gTablero(4, 4);
        
+               
         
     }//GEN-LAST:event_jButton4x4ActionPerformed
 
@@ -357,6 +387,24 @@ public class JuegoTableros extends javax.swing.JFrame {
          
         gTablero(8, 9);
     }//GEN-LAST:event_jButton8x9ActionPerformed
+
+    private void jButtonDado101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDado101ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Dado100().setVisible(true);
+    }//GEN-LAST:event_jButtonDado101ActionPerformed
+
+    private void jButtonDado7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDado7ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Dado6().setVisible(true);
+    }//GEN-LAST:event_jButtonDado7ActionPerformed
+
+    private void jButtonDado3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDado3ActionPerformed
+        // TODO add your handling code here:
+         this.setVisible(false);
+        new Dado3().setVisible(true);
+    }//GEN-LAST:event_jButtonDado3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -398,6 +446,9 @@ public class JuegoTableros extends javax.swing.JFrame {
     private javax.swing.JButton jButton4x4;
     private javax.swing.JButton jButton6x4;
     private javax.swing.JButton jButton8x9;
+    private javax.swing.JButton jButtonDado101;
+    private javax.swing.JButton jButtonDado3;
+    private javax.swing.JButton jButtonDado7;
     private javax.swing.JButton jButtonHaciaE;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblImg;

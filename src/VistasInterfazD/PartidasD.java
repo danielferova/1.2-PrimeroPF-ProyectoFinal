@@ -35,9 +35,10 @@ public class PartidasD extends javax.swing.JFrame {
          this.setLocationRelativeTo(null);
         setSize(1490, 1200);
         setTitle("FEROVA GAME");
-        readBin1(); 
+      //readBin1(); 
         CargarRegistrar();
         Cargardatos();
+         
    
     }
     /**
@@ -48,24 +49,21 @@ public void CargarRegistrar(){
     String columna[]= {"Nombre", "Nombre Vehículo1", "Tipo", "Nombre Vehículo2","Tipo","Nombre Vehículo3", "Tipo"};
     String columna1[] = { "V1" };
     
-    
-        
-  
-    
     modelo= new DefaultTableModel(datos, columna);
     jTableEstadisticas1.setModel(modelo);
     
 }
-    public void readBin1(){
+/**
+ * Método para leer binario
+ */
+    /*public void readBin1(){
         contenedor.clear();
         ObjectInputStream binario = null;
         try {
             
             String nameFile = jTextFieldNombre.getText();
             File file = new File("Persona");
-            
-            
-            
+      
             for (String string : file.list()) {
                 
                 binario = new ObjectInputStream(new FileInputStream(pathPersona+string));
@@ -79,7 +77,7 @@ public void CargarRegistrar(){
             
         } catch (Exception ex) {
             ex.printStackTrace();
-           // Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+         //   Logger.getLogger(Registrar.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 binario.close();
@@ -88,7 +86,7 @@ public void CargarRegistrar(){
             }
         }
         
-    }
+    }*/
 
               /**
                * Método para cargar los datos de mi clase persona y mi JFRAME registrar
@@ -107,14 +105,9 @@ public void CargarRegistrar(){
                      modelo.setValueAt(a.getTipo1(), cont, 2);
                      modelo.setValueAt(a.getTipo2(), cont, 4);
                      modelo.setValueAt(a.getTipo3(), cont, 6);
-                     
-                    
-                    
-                    
+              
                 }
-                    
-                
-                
+    
             }
     
     /**
@@ -210,7 +203,7 @@ public void CargarRegistrar(){
         // TODO add your handling code here:
         this.setVisible(false);
          
-        new OpcionesFinales().setVisible(true);
+        new Iniciar().setVisible(true);
         setSize(825, 866);
           dispose();
     }//GEN-LAST:event_jButtonRegresarEActionPerformed
@@ -238,12 +231,8 @@ public void CargarRegistrar(){
         Registrar.jTextFieldV2.setText(jTableEstadisticas1.getValueAt(fila,3).toString());
         Registrar.Jmostrar3.setText(jTableEstadisticas1.getValueAt(fila,6).toString());
         Registrar.jTextFieldV3.setText(jTableEstadisticas1.getValueAt(fila,5).toString());
-
         R.show();
 
-        // new NewJFrame().setVisible(true);
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCargarActionPerformed
 
     /**

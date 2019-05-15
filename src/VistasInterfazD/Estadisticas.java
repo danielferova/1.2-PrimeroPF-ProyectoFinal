@@ -25,6 +25,7 @@ public class Estadisticas extends javax.swing.JFrame {
    
     private DefaultTableModel modelo;
     int cont = 0;
+    int cont1 = 0;
 
 
     /**

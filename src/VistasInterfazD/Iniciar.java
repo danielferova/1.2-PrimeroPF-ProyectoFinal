@@ -18,7 +18,7 @@ public class Iniciar extends javax.swing.JFrame {
     public Iniciar() {
         initComponents();
         this.setLocationRelativeTo(null);
- setSize(825, 866);
+        setSize(825, 866);
         setTitle("FEROVA GAME");
     }
 
@@ -32,7 +32,7 @@ public class Iniciar extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jButtonTienda1 = new javax.swing.JButton();
+        jButtonCargarPartida = new javax.swing.JButton();
         jButtonRBienvenido = new javax.swing.JButton();
         jButtonSiguiente2 = new javax.swing.JButton();
         jButtonTienda = new javax.swing.JButton();
@@ -45,16 +45,16 @@ public class Iniciar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonTienda1.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonTienda1.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
-        jButtonTienda1.setForeground(new java.awt.Color(255, 0, 51));
-        jButtonTienda1.setText("Cargar una partida");
-        jButtonTienda1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCargarPartida.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCargarPartida.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonCargarPartida.setForeground(new java.awt.Color(255, 0, 51));
+        jButtonCargarPartida.setText("Cargar una partida");
+        jButtonCargarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonTienda1ActionPerformed(evt);
+                jButtonCargarPartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonTienda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 360, 110));
+        getContentPane().add(jButtonCargarPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 360, 110));
 
         jButtonRBienvenido.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRBienvenido.setFont(new java.awt.Font("Copperplate Gothic Bold", 3, 18)); // NOI18N
@@ -109,10 +109,9 @@ public class Iniciar extends javax.swing.JFrame {
     private void jButtonRBienvenidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRBienvenidoActionPerformed
         // TODO add your handling code here:
          this.setVisible(false);
-         
-        new Bienvenido().setVisible(true);
-        setSize(1190, 860);
-          dispose();
+         new Bienvenido().setVisible(true);
+         setSize(1190, 860);
+         dispose();
        
     }//GEN-LAST:event_jButtonRBienvenidoActionPerformed
 /**
@@ -121,10 +120,6 @@ public class Iniciar extends javax.swing.JFrame {
  */
     private void jButtonTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTiendaActionPerformed
         // TODO add your handling code here:
-        
-        
-        
-        
         Tienda entrada4 = new Tienda();
         entrada4.show();
         entrada4.setSize(825, 866);
@@ -142,9 +137,8 @@ public class Iniciar extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jButtonSiguiente2ActionPerformed
 
-    private void jButtonTienda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTienda1ActionPerformed
+    private void jButtonCargarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCargarPartidaActionPerformed
         // TODO add your handling code here:
-        
       Registrar principa2 = new Registrar();
       principa2.show();
       principa2.setVisible(false);
@@ -153,13 +147,10 @@ public class Iniciar extends javax.swing.JFrame {
       principa3.show();
       principa3.setVisible(false);
       
-      
       PartidasD principal = new PartidasD();
       principal.show();
       this.setVisible(false); 
-        
-        
-    }//GEN-LAST:event_jButtonTienda1ActionPerformed
+    }//GEN-LAST:event_jButtonCargarPartidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,10 +189,10 @@ public class Iniciar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonCargarPartida;
     private javax.swing.JButton jButtonRBienvenido;
     private javax.swing.JButton jButtonSiguiente2;
     private javax.swing.JButton jButtonTienda;
-    private javax.swing.JButton jButtonTienda1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

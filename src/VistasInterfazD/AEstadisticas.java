@@ -77,7 +77,7 @@ private DefaultTableModel modelo;
                 jButtonSalirEActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSalirE, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 860, 270, 110));
+        getContentPane().add(jButtonSalirE, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 830, 270, 110));
 
         jLabel2.setFont(new java.awt.Font("Gill Sans MT Condensed", 3, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
@@ -142,7 +142,7 @@ private DefaultTableModel modelo;
             
         } catch (Exception e) {
             e.printStackTrace();
-           // Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+           // Logger.getLogger(Registrar.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             try {
                 binario.close();
